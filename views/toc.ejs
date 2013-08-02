@@ -7,18 +7,29 @@
 <script>
 
 
-var chapter = 1;
-var section = 1;
-function addSection(){
-	$('#page_'+chapter).after('<h4>Section '+chapter+'.'+section+'</h4><p></p></li><li id="li_1" ><label class="description" for="title_'+chapter+'.'+section+'">Title </label><div><input id="title_'+chapter+'.'+section+'" name="title_'+chapter+'.'+section+'" class="element text small" type="text" maxlength="255" value=""/>'+
+var sections = {"1": 1};
+var chapters = 1;
+function addSection(chapter){
+	var section = sections[chapter];
+	var match = "attach_section_"+chapter;
+	$('#'+match).append('<h4>Section '+chapter+'.'+section+'</h4><p></p></li><li id="li_1" ><label class="description" for="title_'+chapter+'.'+section+'">Title </label><div><input id="title_'+chapter+'.'+section+'" name="title_'+chapter+'.'+section+'" class="element text small" type="text" maxlength="255" value=""/>'+
 	'</div><p class="guidelines" id="guide_2"><small>Title of the chapter</small></p></li><li id="li_2" ><label class="description" for="subtitle_'+chapter+'.'+section+'">Subtitle </label><div><input id="subtitle_'+chapter+'.'+section+'" name="subtitle_'+chapter+'.'+section+'" class="element text small" type="text" maxlength="255" value=""/>'+
 	'</div><p class="guidelines" id="guide_2"><small>Subtitle of the chapter</small></p><li id="li_3" ><label class="description" for="page_'+chapter+'.'+section+'">Page </label><div><input id="page_'+chapter+'.'+section+'" name="page_'+chapter+'.'+section+'" class="element text small" type="text" maxlength="5" value=""/>'+
 		'</div> <p class="guidelines" id="guide_3"><small>Page number of the chapter</small></p> ');
-	section++;
+	sections[chapter]++;
 }
 
 function addChapter(){
-	
+	var match = "attach_chapter_"+chapters;
+console.log(match);
+	chapters++;
+	var chapter = chapters;
+
+	$('#'+match).after('<li id="ch_'+chapter+'" class="section_break"><h3>Chapter '+chapter+'</h3><p></p></li><li id="li_1" ><label class="description" for="title_'+chapter+'">Title </label><div><input id="title_'+chapter+'" name="title_'+chapter+'" class="element text small" type="text" maxlength="255" value=""/>'+
+	 	'</div><p class="guidelines" id="guide_2"><small>Title of the chapter</small></p></li><li id="li_2" ><label class="description" for="subtitle_'+chapter+'">Subtitle </label><div><input id="subtitle_'+chapter+'" name="subtitle_'+chapter+'" class="element text small" type="text" maxlength="255" value=""/>'+
+		'</div><p class="guidelines" id="guide_2"><small>Subtitle of the chapter</small></p><li id="li_3" ><label class="description" for="page_'+chapter+'">Page </label><div><input id="page_'+chapter+'" name="page_'+chapter+'" class="element text small" type="text" maxlength="5" value=""/>'+
+		'</div> <p class="guidelines" id="guide_3"><small>Page number of the chapter</small></p></li><span id="attach_section_'+chapter+'"></span></li><button type="button" onclick="addSection('+chapter+')">Add Section</button><span id="attach_chapter_'+chapter+'"></span>');
+	sections[chapter] = 1;
 }
 </script>
 </head>
@@ -57,10 +68,12 @@ function addChapter(){
 		</li>
 		
 			
-		
+		<span id="attach_section_1"></span>
 		</li>		
-			<button type="button" onclick="addSection()">Add Section</button>
-		<li class="section_break">
+			<button type="button" onclick="addSection(1)">Add Section</button>
+			
+				<span id="attach_chapter_1"></span>			
+
 			<button type="button" onclick="addChapter()">Add Chapter</button>	
 			
 					<li class="buttons">
