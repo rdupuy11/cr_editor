@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Theme Color & Assets</title>
+<%- include partials/stylesheet %>
+<%- include partials/script %>
+
+</head>
+<body id="main_body" >
+<%- include partials/menu %>
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Theme Color & Assets</a></h1>
+		<form id="form_661797" class="appnitro" enctype="multipart/form-data" method="post" action="/submit/<%= form %>">
+					<div class="form_description">
+			<h2>Theme Color & Assets</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Theme Color </label>
+		<div>
+			<input id="element_1" name="element_1" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_1"><small>Hexadecimal color value used as default theme color.</small></p> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Menu Button </label>
+		<div>
+			<input id="element_2" name="element_2" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_2"><small>Image used in navigation bar (44x38)</small></p> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Settings Button </label>
+		<div>
+			<input id="element_3" name="element_3" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_3"><small>Image used in navigation bar (44x38)</small></p> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Info Button </label>
+		<div>
+			<input id="element_4" name="element_4" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_4"><small>Image used in navigation bar (44x38)</small></p> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">Tools Button </label>
+		<div>
+			<input id="element_5" name="element_5" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_5"><small>Image used in navigation bar (44x38)</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="661797" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+	</div>
+	<img id="bottom" src="../images/bottom.png" alt="">
+	</body>
+</html>

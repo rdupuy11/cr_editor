@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Response Window</title>
+<%- include partials/includes %>
+
+</head>
+<body id="main_body" >
+<%- include partials/menu %>
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Response Window</a></h1>
+		<form id="form_661797" class="appnitro"  method="post" action="/submit/<%= form %>">
+					<div class="form_description">
+			<h2>Response Window</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Bar Color </label>
+		<div>
+			<input id="element_1" name="bar_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_1"><small>Hexadecimal color value for title bar.</small></p> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Title </label>
+		<div>
+			<input id="element_2" name="title" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_2"><small>Text for title bar (default: "Answer")</small></p> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Background Color </label>
+		<div>
+			<input id="element_3" name="bg_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_3"><small>Hexadecimal color value for background.</small></p> 
+		</li>		<li class="section_break">
+			<h3>Question Area</h3>
+			<p></p>
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Font Color </label>
+		<div>
+			<input id="element_4" name="q_font_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_4"><small>Hexadecimal color value for question font.</small></p> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">Font Size </label>
+		<div>
+			<input id="element_6" name="q_font_size" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_6"><small>Question font size (default: 18)</small></p> 
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Background Color </label>
+		<div>
+			<input id="element_7" name="q_bg_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_7"><small>Hexadecimal color value for question area background.</small></p> 
+		</li>		<li class="section_break">
+			<h3>Answer Area</h3>
+			<p></p>
+		</li>		<li id="li_12" >
+		<label class="description" for="element_12">Background Color </label>
+		<div>
+			<input id="element_12" name="a_bg_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_12"><small>Hexadecimal color value for the background of answer area.</small></p> 
+		</li>		<li id="li_9" >
+		<label class="description" for="element_9">Border Color </label>
+		<div>
+			<input id="element_9" name="a_border_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_9"><small>Hexadecimal color value for the border surrounding answer area.</small></p> 
+		</li>		<li id="li_10" >
+		<label class="description" for="element_10">Border Radius </label>
+		<div>
+			<input id="element_10" name="a_border_radius" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_10"><small>Radius for rounded border corners (default: 5)</small></p> 
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Border Width </label>
+		<div>
+			<input id="element_11" name="a_border_width" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_11"><small>Width of the border surrounding answer area (default: 2)</small></p> 
+		</li>		<li id="li_13" >
+		<label class="description" for="element_13">Font Size </label>
+		<div>
+			<input id="element_13" name="a_font_size" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_13"><small>Font size of user's answer (default: 18)</small></p> 
+		</li>		<li id="li_14" >
+		<label class="description" for="element_14">Font Color </label>
+		<div>
+			<input id="element_14" name="a_font_color" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_14"><small>Hexadecimal color value for user's response text</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="661797" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+	</div>
+	<img id="bottom" src="../images/images/bottom.png" alt="">
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>General Info</title>
+<%- include partials/includes %>
+</head>
+<body id="main_body" >
+<%- include partials/menu %>
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>General Info</a></h1>
+		<form id="form_661797" class="appnitro"  method="post" action="/submit/<%= form %>">
+					<div class="form_description">
+			<h2>General Info</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Title </label>
+		<div>
+			<input id="element_1" name="title" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_1"><small>Title of the book</small></p> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Subtitle </label>
+		<div>
+			<input id="element_2" name="subtitle" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_2"><small>Subtitle of book</small></p> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">ISBN </label>
+		<div>
+			<input id="element_3" name="isbn" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Language </label>
+		<div>
+			<input id="element_4" name="language" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_4"><small>Language in which the book is written</small></p> 
+		</li>
+		<li id="li_5" >
+		<label class="description" for="element_5">Number of Pages </label>
+		<div>
+			<input id="element_5" name="num_pages" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_5"><small>Number of pages in the text</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="661797" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+	</div>
+	<img id="bottom" src="../images/bottom.png" alt="">
+	</body>
+</html>

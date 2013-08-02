@@ -1,0 +1,1 @@
+{"theme_color_assets":{"theme_color":"#FF00FF","menu_button":"f/./public/files/menu_button"},"font_size":{"small":"16","large":"20","extra_large":"28"},"main_window":{"nav_bar_color":"#FFF0FF","title":"Namesake"}}

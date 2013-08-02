@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Table of Contents</title>
+<%- include partials/includes %>
+<script>
+
+</script>
+
+</head>
+<body id="main_body">
+<%- include partials/menu %>
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Table of Contents/a></h1>
+		<form id="form_661797" class="appnitro" enctype="multipart/form-data" method="post" action="/submit/<%= form %>">
+					<div class="form_description">
+			<h2>Table of Contents</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="ch_1" class="section_break">
+			<h3>Chapter 1</h3>
+			<p></p>
+		</li>		<li id="li_1" >
+		<label class="description" for="title_1">Title </label>
+		<div>
+			<input id="title_1" name="title_1" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_2"><small>Title of the chapter</small></p> 
+		</li>		<li id="li_2" >
+				<label class="description" for="subtitle_1">Subtitle </label>
+		<div>
+			<input id="subtitle_1" name="subtitle_1" class="element text small" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_2"><small>Subtitle of the chapter</small></p> 
+
+		<li id="li_3" >
+		<label class="description" for="page_1">Page </label>
+		<div>
+			<input id="page_1" name="page_1" class="element text small" type="text" maxlength="5" value=""/> 
+		</div> <p class="guidelines" id="guide_3"><small>Page number of the chapter</small></p> 
+		</li>
+		
+			
+		
+		</li>		
+			<button type="button" onclick="addSection()">Add Section</button>
+		<li class="section_break">
+			<button type="button" onclick="addChapter()">Add Chapter</button>	
+		
+			<h3>More Titles</h3>
+			<p></p>
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Title </label>
+		<div>
+			<input id="element_4" name="more_titles_1" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_4"><small>Information about the additional title</small></p> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">Title Image </label>
+		<div>
+			<input id="element_6" name="more_titles_icon_1" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_6"><small>Icon for book</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="661797" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+	</div>
+	<img id="bottom" src="../images/bottom.png" alt="">
+	</body>
+</html>

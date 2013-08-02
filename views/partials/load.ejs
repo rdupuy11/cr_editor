@@ -1,0 +1,45 @@
+<script type="text/javascript">
+
+window.onload = function(){
+<%
+for(var key in data[form]){%>
+	var key = "<%= key %>";
+// find the element
+
+	//could be a textarea
+	var el = $('textarea[name="<%= key %>"]');
+
+	var input = false;
+	if(el.length == 0){
+		// or an input
+		el = $('input[name="<%= key %>"]');
+		input = true;
+	}
+
+	if(el.length != 0 && !input){
+		// change html if textarea
+		el.html('<%= data[form][key] %>');
+
+	}
+	else if(el.length != 0){
+
+		if(el.attr("class") != "element file"){
+			// val if input
+			el.val('<%= data[form][key] %>');
+		}
+		else{
+		<% var dir = data[form][key].split('/'); %>
+			var src = '<%= dir.pop() %>';
+			<% if(form == 'theme_color_assets'){ %>
+				el.after('<p><img src="../files/'+src+'" width="44" height="38"/></p>');
+			<% } else{ %>
+				el.after('<p><img src="../files/'+src+'"/></p>');
+			<% } %>
+		}
+	}
+	
+<% } %>
+
+}
+
+</script>

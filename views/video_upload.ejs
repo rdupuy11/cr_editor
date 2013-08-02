@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Video Upload</title>
+<%- include partials/includes %>
+<script>
+var count=2;
+function more(){
+	<% if(typeof(form[data]) !== 'undefined' ){ %> count = <%= form[data].size %>; <% } %>
+	var i = count-1;
+	$('#li_' + i).after('<li id="li_'+count+'" ><label class="description" for="element_'+count+'">Video '+count+' </label><div><input id="element_'+count+'" name="video_'+count+'" class="element file" type="file"/> </div> </li>');
+	count++;
+	
+	
+}
+</script>
+</head>
+<body id="main_body" >
+<%- include partials/menu %>
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Video Upload</a></h1>
+		<form id="form_661797" class="appnitro" enctype="multipart/form-data" method="post" action="/submit/<%= form %>">
+					<div class="form_description">
+			<h2>Video Upload</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+		<li id="li_1" >
+		<label class="description" for="element_1">Video 1 </label><div><input id="element_1" name="video_1" class="element file" type="file"/> </div>  
+		</li>		
+		<% if(typeof(data[form]) !== 'undefined'){ for(var i = 2, len = data[form].size; i <= len; i++){ %>
+			<li id="li_<%= i %>" >
+			<label class="description" for="element_<%= i %>">Video <%= i %> </label><div><input id="element_<%= i %>" name="video_<%= i %>" class="element file" type="file"/> </div> 
+			</li>
+		<% } } %>
+		<li id="more_button">
+		<button type="button" onclick="more()">Add Video</button>
+		</li>	
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="661797" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+
+	</div>
+	<img id="bottom" src="../images/bottom.png" alt="">
+	</body>
+</html>
